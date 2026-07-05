@@ -1,16 +1,13 @@
 package com.example.demo;
 
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.stereotype.Component;
-
 import com.example.demo.EnginePackage.Engine;
 
-@Component
+// @Component
 public class Car {
 
-    private Engine engine;
+    private final Engine engine;
 
-    public Car(@Qualifier("petrolEngine")Engine engine){
+    public Car(Engine engine){
         this.engine=engine;
     }
 
